@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hospital Information</title>
+    <style>
+        address {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <h2 id="msg"></h2>
+
+    <p>Enter Your Name And FeedBack</p>
+    <input id="txt" type="text">
+
+    <button onclick="SendMessage()">Save</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function SendMessage() {
+            var val = document.getElementById("txt").value;
+            window.chrome.webview.postMessage(val);
+            
+        }
+      
+        function MessageReceived(Message) {
+            
+            document.getElementById("msg").innerHTML ="Welcome"+ Message + "!!";
+        }
+    </script>
+
+    <form>
+        <img src="C:\Users\sneha_patil2\Desktop\i3.jpg" height="150" width="520">
+        <br>
+        <p align="justify">
+            A hospital is a health care institution providing patient treatment with specialized health science and auxiliary healthcare staff and medical equipment.
+            Specialized hospitals include trauma centers, rehabilitation hospitals, children's hospitals, seniors' hospitals, and hospitals for dealing with specific medical needs such as psychiatric treatment and certain disease categories. Specialized hospitals can help reduce health care costs compared to general hospitals. Hospitals are classified as general, specialty, or government depending on the sources of income received.
+            <br>
+
+        </p>
+
+        <address>
+            <h2>Contact Us</h2>
+            HelthEdge Care Hospital.<br>
+            Call: +123214678<br>
+            HelthEdge@gmail.com<br>
+            HelthEdge Care Hospital,Hijewadi,Pune<br>
+
+        </address>
+    </form>
+</body>
+</html>

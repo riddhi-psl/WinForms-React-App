@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hospital Information</title>
+    <style>
+        address {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+    <!--<script>
+    window.chrome.webview.addEventListener('message', event => {
+    alert(event.data);
+    WriteDataFromCsharp(event.data);
+    });
+    function WriteDataFromCsharp(data) {
+    var target = document.getElementById('target');
+    if (target === null) { alert('target not found') };
+    //alert(target.id);
+    //target.textContent = event.data;
+
+    rootNode = JSON.parse(data);
+    target.innerHTML = addTable(rootNode); //addTable create an HTML table from the deserialized object rootNode
+    }
+    function RequestData() {
+    //function triggered by a button on the html page
+    //alert('post to c#');
+    window.chrome.webview.postMessage('getData');
+        }
+        </script>-->
+    <script language="JavaScript">
+
+        function showInput() {
+            document.getElementById('display').innerHTML =
+                document.getElementById("user_input").value;
+            document.getElementById('display1').innerHTML =
+                document.getElementById("user_input1").value;
+        }
+    </script>
+</head>
+<body>
+
+
+    <p>Through this page we can send messages to C# application</p>
+    <input id="txt" type="text">
+
+    <button onclick="SendMessage()">Name and Feedback</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function SendMessage() {
+            var val = document.getElementById("txt").value;
+            window.chrome.webview.postMessage(val);
+        }
+
+        function MessageReceived(Message) {
+            alert('HTML Page Popup :' + Message);
+        }
+    </script>
+
+    <form>
+        <img src="C:\Users\sneha_patil2\Desktop\i3.jpg" height="150" width="520">
+        <br>
+        <p align="justify">
+            A hospital is a health care institution providing patient treatment with specialized health science and auxiliary healthcare staff and medical equipment.
+            Specialized hospitals include trauma centers, rehabilitation hospitals, children's hospitals, seniors' hospitals, and hospitals for dealing with specific medical needs such as psychiatric treatment and certain disease categories. Specialized hospitals can help reduce health care costs compared to general hospitals. Hospitals are classified as general, specialty, or government depending on the sources of income received.
+            <br>
+
+        </p>
+
+        <address>
+            <h2>Contact Us</h2>
+            HelthEdge Care Hospital.<br>
+            Call: +123214678<br>
+            HelthEdge@gmail.com<br>
+            HelthEdge Care Hospital,Hijewadi,Pune<br>
+
+        </address>
+    </form>
+</body>
+</html>

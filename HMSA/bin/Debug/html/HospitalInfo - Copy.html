@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hospital Information</title>
+    <style>
+        address {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+    <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML =
+            document.getElementById("user_input").value;
+        document.getElementById('display1').innerHTML =
+            document.getElementById("user_input1").value;
+    }
+    </script>
+    </head>
+<body style="background-color:#1c87c9;">
+
+
+    <h3 id="Title">WellCome!!!</h3>
+    <form>
+        <label><b>Enter a Name</b></label>
+        <input type="text" name="message" id="user_input"><br><br>
+        <label><b>Your feedback</b></label>
+        <input type="text" name="message" id="user_input1">
+    </form>
+    <br>
+    <input type="submit" onclick="showInput();"><br />
+    <label>Your Feedback: </label>
+    <p><span id='display'></span><br>
+       <span id='display1'></span></p>
+    <p>Thank you for your Feedback!!!</p>
+
+    <form>
+        <img src="C:\Users\sneha_patil2\Desktop\i3.jpg" height="150" width="520">
+        <br>
+        <p align="justify">
+            A hospital is a health care institution providing patient treatment with specialized health science and auxiliary healthcare staff and medical equipment.
+            Specialized hospitals include trauma centers, rehabilitation hospitals, children's hospitals, seniors' hospitals, and hospitals for dealing with specific medical needs such as psychiatric treatment and certain disease categories. Specialized hospitals can help reduce health care costs compared to general hospitals. Hospitals are classified as general, specialty, or government depending on the sources of income received.
+            <br>
+
+        </p>
+
+        <address>
+            <h2>Contact Us</h2>
+            HelthEdge Care Hospital.<br>
+            Call: +123214678<br>
+            HelthEdge@gmail.com<br>
+            HelthEdge Care Hospital,Hijewadi,Pune<br>
+
+        </address>
+    </form>
+</body>
+</html>

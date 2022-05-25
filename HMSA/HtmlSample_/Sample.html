@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+    <p>Enter your name and feedback</p>
+
+    <input id="txt" type="text">
+
+    <button onclick="SendMessage()">Save</button>
+
+    <p id="demo"></p>
+
+    <script>
+function SendMessage()
+{
+	 var val = document.getElementById("txt").value;
+    window.chrome.webView21.postMessage(val);
+}
+
+function MessageReceived(Message)
+{
+   alert('HTML Page Popup :'+Message);
+}
+    </script>
+
+</body>
+</html>
