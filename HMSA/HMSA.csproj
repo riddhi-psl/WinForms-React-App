@@ -276,6 +276,7 @@
     <Content Include="bin\Debug\ru\DevExpress.Utils.v21.2.resources.dll" />
     <Content Include="bin\Debug\ru\DevExpress.XtraEditors.v21.2.resources.dll" />
     <Content Include="HtmlSample_\SampleWebMessage.html" />
+    <None Include="Resources\log.png" />
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>

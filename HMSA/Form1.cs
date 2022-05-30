@@ -477,7 +477,7 @@ namespace HMSA
                     }
                     else
                     {
-                        MessageBox.Show("Error Login");
+                        MessageBox.Show("Login Error");
                     }
                 }
 
@@ -517,6 +517,31 @@ namespace HMSA
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelRegister_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCpass_TextChanged(object sender, EventArgs e)
         {
 
         }

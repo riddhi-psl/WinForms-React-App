@@ -34,6 +34,7 @@ namespace HMSA
             this.btnHistory = new System.Windows.Forms.Button();
             this.btnHospitalInfo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cancel_btn = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -80,8 +81,8 @@ namespace HMSA
             this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -89,17 +90,20 @@ namespace HMSA
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddPatient
             // 
-            this.btnAddPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
+            this.btnAddPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(239)))));
+            this.btnAddPatient.FlatAppearance.BorderSize = 0;
+            this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatient.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatient.Location = new System.Drawing.Point(12, 48);
+            this.btnAddPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.btnAddPatient.Location = new System.Drawing.Point(30, 89);
             this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(216, 50);
+            this.btnAddPatient.Size = new System.Drawing.Size(238, 60);
             this.btnAddPatient.TabIndex = 28;
             this.btnAddPatient.Text = "Add New Patient";
             this.btnAddPatient.UseVisualStyleBackColor = false;
@@ -107,12 +111,14 @@ namespace HMSA
             // 
             // btnAddMoreInfo
             // 
-            this.btnAddMoreInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
+            this.btnAddMoreInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(239)))));
+            this.btnAddMoreInfo.FlatAppearance.BorderSize = 0;
+            this.btnAddMoreInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMoreInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMoreInfo.ForeColor = System.Drawing.Color.White;
-            this.btnAddMoreInfo.Location = new System.Drawing.Point(259, 49);
+            this.btnAddMoreInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.btnAddMoreInfo.Location = new System.Drawing.Point(283, 89);
             this.btnAddMoreInfo.Name = "btnAddMoreInfo";
-            this.btnAddMoreInfo.Size = new System.Drawing.Size(273, 50);
+            this.btnAddMoreInfo.Size = new System.Drawing.Size(266, 60);
             this.btnAddMoreInfo.TabIndex = 29;
             this.btnAddMoreInfo.Text = "Add More Information";
             this.btnAddMoreInfo.UseVisualStyleBackColor = false;
@@ -120,12 +126,14 @@ namespace HMSA
             // 
             // btnHistory
             // 
-            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
-            this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistory.ForeColor = System.Drawing.Color.White;
-            this.btnHistory.Location = new System.Drawing.Point(553, 48);
+            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(239)))));
+            this.btnHistory.FlatAppearance.BorderSize = 0;
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.btnHistory.Location = new System.Drawing.Point(562, 89);
             this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(216, 50);
+            this.btnHistory.Size = new System.Drawing.Size(275, 60);
             this.btnHistory.TabIndex = 30;
             this.btnHistory.Text = "All Patient History";
             this.btnHistory.UseVisualStyleBackColor = false;
@@ -133,12 +141,14 @@ namespace HMSA
             // 
             // btnHospitalInfo
             // 
-            this.btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
-            this.btnHospitalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHospitalInfo.ForeColor = System.Drawing.Color.White;
-            this.btnHospitalInfo.Location = new System.Drawing.Point(795, 49);
+            this.btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(239)))));
+            this.btnHospitalInfo.FlatAppearance.BorderSize = 0;
+            this.btnHospitalInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHospitalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnHospitalInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.btnHospitalInfo.Location = new System.Drawing.Point(846, 89);
             this.btnHospitalInfo.Name = "btnHospitalInfo";
-            this.btnHospitalInfo.Size = new System.Drawing.Size(216, 50);
+            this.btnHospitalInfo.Size = new System.Drawing.Size(263, 60);
             this.btnHospitalInfo.TabIndex = 31;
             this.btnHospitalInfo.Text = "Hospital Information";
             this.btnHospitalInfo.UseVisualStyleBackColor = false;
@@ -146,7 +156,8 @@ namespace HMSA
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.panel1.Controls.Add(this.cancel_btn);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
@@ -167,20 +178,35 @@ namespace HMSA
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(1, 105);
+            this.panel1.Location = new System.Drawing.Point(30, 164);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1030, 524);
+            this.panel1.Size = new System.Drawing.Size(1079, 536);
             this.panel1.TabIndex = 33;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // cancel_btn
+            // 
+            this.cancel_btn.BackColor = System.Drawing.Color.White;
+            this.cancel_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel_btn.ForeColor = System.Drawing.Color.Silver;
+            this.cancel_btn.Location = new System.Drawing.Point(633, 427);
+            this.cancel_btn.Name = "cancel_btn";
+            this.cancel_btn.Size = new System.Drawing.Size(153, 58);
+            this.cancel_btn.TabIndex = 53;
+            this.cancel_btn.Text = "Cancel";
+            this.cancel_btn.UseVisualStyleBackColor = false;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
+            // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(691, 401);
+            this.btnSave.Location = new System.Drawing.Point(795, 427);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(111, 51);
+            this.btnSave.Size = new System.Drawing.Size(153, 58);
             this.btnSave.TabIndex = 52;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -190,7 +216,7 @@ namespace HMSA
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(755, 307);
+            this.radioButton2.Location = new System.Drawing.Point(294, 326);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(102, 29);
             this.radioButton2.TabIndex = 51;
@@ -203,7 +229,7 @@ namespace HMSA
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(663, 307);
+            this.radioButton1.Location = new System.Drawing.Point(202, 326);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(80, 29);
             this.radioButton1.TabIndex = 50;
@@ -214,68 +240,103 @@ namespace HMSA
             // 
             // txtAny
             // 
-            this.txtAny.Location = new System.Drawing.Point(570, 233);
+            this.txtAny.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAny.Location = new System.Drawing.Point(715, 170);
             this.txtAny.Multiline = true;
             this.txtAny.Name = "txtAny";
-            this.txtAny.Size = new System.Drawing.Size(358, 35);
+            this.txtAny.Size = new System.Drawing.Size(245, 35);
             this.txtAny.TabIndex = 49;
+            this.txtAny.Text = "Enter Any Major Disease";
             this.txtAny.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtAny.Enter += new System.EventHandler(this.txtAny_Enter);
+            this.txtAny.Leave += new System.EventHandler(this.txtAny_Leave);
             // 
             // txtPid
             // 
-            this.txtPid.Location = new System.Drawing.Point(683, 125);
+            this.txtPid.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtPid.Location = new System.Drawing.Point(715, 96);
             this.txtPid.Multiline = true;
             this.txtPid.Name = "txtPid";
             this.txtPid.Size = new System.Drawing.Size(245, 35);
             this.txtPid.TabIndex = 48;
+            this.txtPid.Text = "Enter Patient ID";
+            this.txtPid.TextChanged += new System.EventHandler(this.txtPid_TextChanged);
+            this.txtPid.Enter += new System.EventHandler(this.txtPid_Enter);
+            this.txtPid.Leave += new System.EventHandler(this.txtPid_Leave);
             // 
             // txtBlood
             // 
             this.txtBlood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBlood.Location = new System.Drawing.Point(235, 418);
+            this.txtBlood.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtBlood.Location = new System.Drawing.Point(715, 330);
             this.txtBlood.Multiline = true;
             this.txtBlood.Name = "txtBlood";
-            this.txtBlood.Size = new System.Drawing.Size(275, 35);
+            this.txtBlood.Size = new System.Drawing.Size(245, 35);
             this.txtBlood.TabIndex = 47;
+            this.txtBlood.Text = "Enter Blood Group";
             this.txtBlood.TextChanged += new System.EventHandler(this.txtBlood_TextChanged);
+            this.txtBlood.Enter += new System.EventHandler(this.txtBlood_Enter);
+            this.txtBlood.Leave += new System.EventHandler(this.txtBlood_Leave);
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(235, 338);
+            this.txtAge.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAge.Location = new System.Drawing.Point(715, 249);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(275, 35);
+            this.txtAge.Size = new System.Drawing.Size(245, 35);
             this.txtAge.TabIndex = 46;
+            this.txtAge.Text = "Enter Age";
+            this.txtAge.TextChanged += new System.EventHandler(this.txtAge_TextChanged);
+            this.txtAge.Enter += new System.EventHandler(this.txtAge_Enter);
+            this.txtAge.Leave += new System.EventHandler(this.txtAge_Leave);
             // 
             // txtContactNumber
             // 
-            this.txtContactNumber.Location = new System.Drawing.Point(235, 268);
+            this.txtContactNumber.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtContactNumber.Location = new System.Drawing.Point(202, 239);
             this.txtContactNumber.Multiline = true;
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(275, 35);
             this.txtContactNumber.TabIndex = 45;
+            this.txtContactNumber.Text = "Enter Contact Number";
+            this.txtContactNumber.TextChanged += new System.EventHandler(this.txtContactNumber_TextChanged);
+            this.txtContactNumber.Enter += new System.EventHandler(this.txtContactNumber_Enter);
+            this.txtContactNumber.Leave += new System.EventHandler(this.TxtContact_Leave);
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(235, 196);
+            this.txtAddress.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAddress.Location = new System.Drawing.Point(202, 167);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(275, 35);
             this.txtAddress.TabIndex = 44;
+            this.txtAddress.Text = "Enter Full Address";
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
+            this.txtAddress.Enter += new System.EventHandler(this.txtAddress_Enter);
+            this.txtAddress.Leave += new System.EventHandler(this.txtAddress_Leave);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(235, 125);
+            this.txtName.AccessibleName = "";
+            this.txtName.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtName.Location = new System.Drawing.Point(202, 96);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(275, 35);
             this.txtName.TabIndex = 43;
+            this.txtName.Tag = "";
+            this.txtName.Text = "Enter Full Name";
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave_1);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(565, 309);
+            this.label10.Location = new System.Drawing.Point(104, 326);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 25);
             this.label10.TabIndex = 42;
@@ -286,7 +347,7 @@ namespace HMSA
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(565, 196);
+            this.label9.Location = new System.Drawing.Point(509, 173);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(177, 25);
             this.label9.TabIndex = 41;
@@ -296,7 +357,7 @@ namespace HMSA
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(565, 128);
+            this.label8.Location = new System.Drawing.Point(590, 99);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 25);
             this.label8.TabIndex = 40;
@@ -306,7 +367,7 @@ namespace HMSA
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(63, 421);
+            this.label7.Location = new System.Drawing.Point(561, 330);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 25);
             this.label7.TabIndex = 39;
@@ -317,7 +378,7 @@ namespace HMSA
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(63, 346);
+            this.label6.Location = new System.Drawing.Point(628, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 25);
             this.label6.TabIndex = 38;
@@ -328,7 +389,7 @@ namespace HMSA
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(63, 271);
+            this.label5.Location = new System.Drawing.Point(30, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 25);
             this.label5.TabIndex = 37;
@@ -339,7 +400,7 @@ namespace HMSA
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(63, 199);
+            this.label4.Location = new System.Drawing.Point(96, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 25);
             this.label4.TabIndex = 36;
@@ -349,7 +410,7 @@ namespace HMSA
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 128);
+            this.label3.Location = new System.Drawing.Point(117, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 25);
             this.label3.TabIndex = 35;
@@ -359,15 +420,17 @@ namespace HMSA
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(348, 25);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.label2.Location = new System.Drawing.Point(24, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(346, 32);
             this.label2.TabIndex = 34;
             this.label2.Text = "Add New Patient Record";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.panel2.Controls.Add(this.EditBtn);
             this.panel2.Controls.Add(this.txtMedicines);
             this.panel2.Controls.Add(this.txtDignosis);
@@ -384,19 +447,20 @@ namespace HMSA
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textpid);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Location = new System.Drawing.Point(1, 105);
+            this.panel2.Location = new System.Drawing.Point(30, 167);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1030, 524);
+            this.panel2.Size = new System.Drawing.Size(1080, 530);
             this.panel2.TabIndex = 53;
             // 
             // EditBtn
             // 
-            this.EditBtn.BackColor = System.Drawing.Color.Coral;
-            this.EditBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBtn.ForeColor = System.Drawing.Color.White;
-            this.EditBtn.Location = new System.Drawing.Point(653, 413);
+            this.EditBtn.BackColor = System.Drawing.Color.White;
+            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBtn.ForeColor = System.Drawing.Color.Silver;
+            this.EditBtn.Location = new System.Drawing.Point(633, 413);
             this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(133, 48);
+            this.EditBtn.Size = new System.Drawing.Size(153, 58);
             this.EditBtn.TabIndex = 69;
             this.EditBtn.Text = "Edit";
             this.EditBtn.UseVisualStyleBackColor = false;
@@ -404,19 +468,31 @@ namespace HMSA
             // 
             // txtMedicines
             // 
+            this.txtMedicines.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedicines.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtMedicines.Location = new System.Drawing.Point(202, 415);
             this.txtMedicines.Multiline = true;
             this.txtMedicines.Name = "txtMedicines";
             this.txtMedicines.Size = new System.Drawing.Size(252, 40);
             this.txtMedicines.TabIndex = 68;
+            this.txtMedicines.Text = "Enter Medicine";
+            this.txtMedicines.TextChanged += new System.EventHandler(this.txtMedicines_TextChanged);
+            this.txtMedicines.Enter += new System.EventHandler(this.txtMedicines_Enter);
+            this.txtMedicines.Leave += new System.EventHandler(this.txtMedicines_Leave);
             // 
             // txtDignosis
             // 
+            this.txtDignosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDignosis.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtDignosis.Location = new System.Drawing.Point(202, 353);
             this.txtDignosis.Multiline = true;
             this.txtDignosis.Name = "txtDignosis";
             this.txtDignosis.Size = new System.Drawing.Size(252, 40);
             this.txtDignosis.TabIndex = 67;
+            this.txtDignosis.Text = "Enter Diagnosis";
+            this.txtDignosis.TextChanged += new System.EventHandler(this.txtDignosis_TextChanged);
+            this.txtDignosis.Enter += new System.EventHandler(this.txtDignosis_Enter);
+            this.txtDignosis.Leave += new System.EventHandler(this.txtDignosis_Leave);
             // 
             // comboBox2
             // 
@@ -431,11 +507,17 @@ namespace HMSA
             // 
             // txtSymptoms
             // 
+            this.txtSymptoms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSymptoms.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtSymptoms.Location = new System.Drawing.Point(202, 291);
             this.txtSymptoms.Multiline = true;
             this.txtSymptoms.Name = "txtSymptoms";
             this.txtSymptoms.Size = new System.Drawing.Size(252, 40);
             this.txtSymptoms.TabIndex = 64;
+            this.txtSymptoms.Text = "Enter Symptoms";
+            this.txtSymptoms.TextChanged += new System.EventHandler(this.txtSymptoms_TextChanged);
+            this.txtSymptoms.Enter += new System.EventHandler(this.txtSymptoms_Enter);
+            this.txtSymptoms.Leave += new System.EventHandler(this.txtSymptoms_Leave);
             // 
             // label11
             // 
@@ -484,17 +566,17 @@ namespace HMSA
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(80, 300);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 25);
+            this.label15.Size = new System.Drawing.Size(105, 25);
             this.label15.TabIndex = 59;
-            this.label15.Text = "Symptom\'s";
+            this.label15.Text = "Symptoms";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(349, 92);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(323, 83);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 25);
+            this.label16.Size = new System.Drawing.Size(116, 29);
             this.label16.TabIndex = 58;
             this.label16.Text = "Patient ID";
             // 
@@ -522,12 +604,14 @@ namespace HMSA
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(795, 413);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 48);
+            this.button1.Size = new System.Drawing.Size(153, 58);
             this.button1.TabIndex = 55;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
@@ -535,31 +619,40 @@ namespace HMSA
             // 
             // textpid
             // 
-            this.textpid.Location = new System.Drawing.Point(456, 82);
+            this.textpid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textpid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textpid.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textpid.Location = new System.Drawing.Point(458, 80);
             this.textpid.Multiline = true;
             this.textpid.Name = "textpid";
-            this.textpid.Size = new System.Drawing.Size(205, 40);
+            this.textpid.Size = new System.Drawing.Size(205, 37);
             this.textpid.TabIndex = 54;
+            this.textpid.Text = "Search Patient ID";
             this.textpid.TextChanged += new System.EventHandler(this.textpid_TextChanged);
+            this.textpid.Enter += new System.EventHandler(this.textpid_Enter);
+            this.textpid.Leave += new System.EventHandler(this.textpid_Leave);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(214, 17);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.label20.Location = new System.Drawing.Point(23, 25);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(608, 37);
+            this.label20.Size = new System.Drawing.Size(541, 32);
             this.label20.TabIndex = 53;
             this.label20.Text = "Adding More Information About Patient";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Controls.Add(this.label17);
-            this.panel3.Location = new System.Drawing.Point(1, 108);
+            this.panel3.Location = new System.Drawing.Point(30, 167);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1030, 521);
+            this.panel3.Size = new System.Drawing.Size(1079, 527);
             this.panel3.TabIndex = 69;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -570,29 +663,31 @@ namespace HMSA
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(996, 415);
+            this.dataGridView2.Size = new System.Drawing.Size(1036, 392);
             this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick_1);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(321, 19);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.label17.Location = new System.Drawing.Point(23, 36);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(419, 37);
+            this.label17.Size = new System.Drawing.Size(374, 32);
             this.label17.TabIndex = 1;
             this.label17.Text = "Full History Of The Patient";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.panel4.Controls.Add(this.lblRecivmsg);
             this.panel4.Controls.Add(this.Sendmsg);
             this.panel4.Controls.Add(this.txtSendmsg);
             this.panel4.Controls.Add(this.webView);
-            this.panel4.Location = new System.Drawing.Point(1, 108);
+            this.panel4.Location = new System.Drawing.Point(30, 167);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1030, 521);
+            this.panel4.Size = new System.Drawing.Size(1079, 530);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -600,6 +695,7 @@ namespace HMSA
             // 
             this.lblRecivmsg.AutoSize = true;
             this.lblRecivmsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecivmsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
             this.lblRecivmsg.Location = new System.Drawing.Point(710, 23);
             this.lblRecivmsg.Name = "lblRecivmsg";
             this.lblRecivmsg.Size = new System.Drawing.Size(265, 25);
@@ -610,8 +706,11 @@ namespace HMSA
             // Sendmsg
             // 
             this.Sendmsg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
+            this.Sendmsg.FlatAppearance.BorderSize = 0;
+            this.Sendmsg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sendmsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sendmsg.ForeColor = System.Drawing.Color.White;
-            this.Sendmsg.Location = new System.Drawing.Point(328, 8);
+            this.Sendmsg.Location = new System.Drawing.Point(328, 12);
             this.Sendmsg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Sendmsg.Name = "Sendmsg";
             this.Sendmsg.Size = new System.Drawing.Size(155, 47);
@@ -622,7 +721,7 @@ namespace HMSA
             // 
             // txtSendmsg
             // 
-            this.txtSendmsg.Location = new System.Drawing.Point(54, 8);
+            this.txtSendmsg.Location = new System.Drawing.Point(54, 12);
             this.txtSendmsg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSendmsg.Multiline = true;
             this.txtSendmsg.Name = "txtSendmsg";
@@ -635,10 +734,11 @@ namespace HMSA
             this.webView.BackColor = System.Drawing.Color.White;
             this.webView.CreationProperties = null;
             this.webView.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView.Location = new System.Drawing.Point(6, 66);
+            this.webView.Location = new System.Drawing.Point(6, 71);
             this.webView.Name = "webView";
-            this.webView.Size = new System.Drawing.Size(1016, 447);
-            this.webView.Source = new System.Uri("C:\\Users\\sneha_patil2\\source\\repos\\HMSF\\HMSA\\HtmlSample_\\SampleWebMessage.html", System.UriKind.Absolute);
+            this.webView.Size = new System.Drawing.Size(1044, 419);
+            this.webView.Source = new System.Uri("C:\\Users\\riddhi_pal\\source\\repos\\HMSReactApp\\HMSA\\HtmlSample_\\SampleWebMessage.ht" +
+        "ml", System.UriKind.Absolute);
             this.webView.TabIndex = 0;
             this.webView.ZoomFactor = 1D;
             this.webView.Click += new System.EventHandler(this.webView_Click);
@@ -646,54 +746,58 @@ namespace HMSA
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(286, 5);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.label1.Location = new System.Drawing.Point(275, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(468, 37);
+            this.label1.Size = new System.Drawing.Size(577, 46);
             this.label1.TabIndex = 70;
             this.label1.Text = "Hospital Management System";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(154)))), ((int)(((byte)(237)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(431, 49);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(239)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.button2.Location = new System.Drawing.Point(425, 89);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 50);
+            this.button2.Size = new System.Drawing.Size(268, 60);
             this.button2.TabIndex = 71;
             this.button2.Text = "Hospital Image";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_3);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HMSA.Properties.Resources.log;
+            this.pictureBox3.Location = new System.Drawing.Point(967, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(142, 51);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 72;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HMSA.Properties.Resources.i3;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 105);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 175);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1029, 524);
+            this.pictureBox1.Size = new System.Drawing.Size(1080, 525);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(896, 5);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(134, 38);
-            this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "Log Out";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.button5_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1035, 629);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1136, 724);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
@@ -705,7 +809,6 @@ namespace HMSA
             this.Controls.Add(this.btnHospitalInfo);
             this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnAddPatient);
-            this.Controls.Add(this.btnExit);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
@@ -720,6 +823,7 @@ namespace HMSA
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -727,7 +831,6 @@ namespace HMSA
         }
 
         #endregion
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnAddPatient;
         private System.Windows.Forms.Button btnAddMoreInfo;
         private System.Windows.Forms.Button btnHistory;
@@ -780,5 +883,7 @@ namespace HMSA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button cancel_btn;
     }
 }

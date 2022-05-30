@@ -135,10 +135,6 @@ namespace HMSA
         {
             this.Close();
         }
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
 
@@ -181,6 +177,15 @@ namespace HMSA
 
         private void btnAddPatient_Click_1(object sender, EventArgs e)
         {
+            btnAddPatient.BackColor = System.Drawing.Color.FromArgb(38, 154, 237);
+            btnAddPatient.ForeColor = System.Drawing.Color.White;
+
+            btnAddMoreInfo.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnAddMoreInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnHistory.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnHistory.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnHospitalInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
 
             panel1.Visible = true;
             panel2.Visible = false;
@@ -193,6 +198,16 @@ namespace HMSA
         private void btnAddMoreInfo_Click(object sender, EventArgs e)
         {
             //hidepanels();
+            btnAddMoreInfo.BackColor = System.Drawing.Color.FromArgb(38, 154, 237);
+            btnAddMoreInfo.ForeColor = System.Drawing.Color.White;
+
+            btnAddPatient.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnAddPatient.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnHistory.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnHistory.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnHospitalInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+
             panel2.Visible = true;
             panel1.Visible = false;
             panel3.Visible = false;
@@ -227,56 +242,86 @@ namespace HMSA
         private void textpid_TextChanged(object sender, EventArgs e)
         {
 
-            if (textpid.Text != "" )
-            {
-                
-                int pid = int.Parse(textpid.Text);
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "select * from AddPatient where pid=" + pid + "";
-                //cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                //int a;
 
-                dataGridView1.DataSource = ds.Tables[0];
+            if (textpid.Text != "")
+            {
+                try
+                {
+                    int pid = int.Parse(textpid.Text);
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "select * from AddPatient where pid=" + pid + "";
+                    //cmd.ExecuteNonQuery();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    //int a;
+
+
+
+                    dataGridView1.DataSource = ds.Tables[0];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+
+
 
             }
-
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (textpid.Text == "" || txtSymptoms.Text == "" || txtDignosis.Text == "" || txtMedicines.Text == "" || comboBox1.Text == "" || comboBox2.Text == "")
             {
-                int pid = int.Parse(textpid.Text);
-
-
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "insert into PatientMore(pid,Symptoms,Diagonosis,Medicines,Ward ,Ward_Type) values('" + textpid.Text + "', '" + txtSymptoms.Text + "', '" + txtDignosis.Text + "', '" + txtMedicines.Text + "', '" + comboBox1.Text + "',  '" + comboBox2.Text + "')";
-                //cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                MessageBox.Show("data has been saved in database");
+                MessageBox.Show("Plese fill in the blanks");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            textpid.Clear();
-            txtSymptoms.Clear();
-            txtDignosis.Clear();
-            txtMedicines.Clear();
+            else
+            { 
 
-        
-    }
+                try
+                {
+
+
+
+                    int pid = int.Parse(textpid.Text);
+
+
+
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "insert into PatientMore(pid,Symptoms,Diagonosis,Medicines,Ward ,Ward_Type) values('" + textpid.Text + "', '" + txtSymptoms.Text + "', '" + txtDignosis.Text + "', '" + txtMedicines.Text + "', '" + comboBox1.Text + "', '" + comboBox2.Text + "')";
+                    //cmd.ExecuteNonQuery();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    MessageBox.Show("data has been saved in database");
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+
+        }
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
+            btnHistory.BackColor = System.Drawing.Color.FromArgb(38, 154, 237);
+            btnHistory.ForeColor = System.Drawing.Color.White;
+
+            btnAddPatient.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnAddPatient.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnAddMoreInfo.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnAddMoreInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnHospitalInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+
             panel3.Visible = true;
             panel1.Visible = false;
             panel2.Visible = false;
@@ -310,7 +355,15 @@ namespace HMSA
 
         public void btnHospitalInfo_Click(object sender, EventArgs e)
         {
+            btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(38, 154, 237);
+            btnHospitalInfo.ForeColor = System.Drawing.Color.White;
 
+            btnAddPatient.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnAddPatient.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnAddMoreInfo.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnAddMoreInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnHistory.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnHistory.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
 
             panel4.Visible = true;
             panel1.Visible = false;
@@ -385,9 +438,16 @@ namespace HMSA
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            int pid = int.Parse(textpid.Text);
-            Form2 fm = new Form2(pid);
-            fm.ShowDialog(this);
+            try
+            {
+                int pid = int.Parse(textpid.Text);
+                Form2 fm = new Form2(pid);
+                fm.ShowDialog(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -417,11 +477,6 @@ namespace HMSA
         private void label18_Click(object sender, EventArgs e)
         {
             
-        }
-
-        private void txtBlood_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -465,6 +520,298 @@ namespace HMSA
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+            if (txtName.Text == "Enter Full Name")
+            {
+                txtName.Text = "";
+                txtName.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtName_Leave_1(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                txtName.Text = "Enter Full Name";
+                txtName.ForeColor = Color.Gray;
+            }
+        }
+
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtAddress_Enter(object sender, EventArgs e)
+        {
+            if (txtAddress.Text == "Enter Full Address")
+            {
+                txtAddress.Text = "";
+                txtAddress.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtAddress_Leave(object sender, EventArgs e)
+        {
+            if (txtAddress.Text == "")
+            {
+                txtAddress.Text = "Enter Full Address";
+                txtAddress.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtContactNumber_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtContactNumber_Enter(object sender, EventArgs e)
+        {
+            if (txtContactNumber.Text == "Enter Contact Number")
+            {
+                txtContactNumber.Text = "";
+                txtContactNumber.ForeColor = Color.Black;
+            }
+        }
+
+        private void TxtContact_Leave(object sender, EventArgs e)
+        {
+            if (txtAddress.Text == "")
+            {
+                txtAddress.Text = "Enter Contact Number";
+                txtAddress.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtAge_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtAge_Enter(object sender, EventArgs e)
+        {
+            if (txtAge.Text == "Enter Age")
+            {
+                txtAge.Text = "";
+                txtAge.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtAge_Leave(object sender, EventArgs e)
+        {
+            if (txtAge.Text == "")
+            {
+                txtAge.Text = "Enter Age";
+                txtAge.ForeColor = Color.Gray;
+            }
+        }
+
+
+        private void txtPid_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPid_Enter(object sender, EventArgs e)
+        {
+            if (txtPid.Text == "Enter Patient ID")
+            {
+                txtPid.Text = "";
+                txtPid.ForeColor = Color.Black;
+            }
+        }
+
+
+        private void txtPid_Leave(object sender, EventArgs e)
+        {
+            if (txtAge.Text == "")
+            {
+                txtAge.Text = "Enter Patient ID";
+                txtAge.ForeColor = Color.Gray;
+            }
+        }
+
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtAny_Enter(object sender, EventArgs e)
+        {
+            if (txtAny.Text == "Enter Any Major Disease")
+            {
+                txtAny.Text = "";
+                txtAny.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtAny_Leave(object sender, EventArgs e)
+        {
+            if (txtAny.Text == "")
+            {
+                txtAny.Text = "Enter Any Major Disease";
+                txtAny.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtBlood_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBlood_Enter(object sender, EventArgs e)
+        {
+            if (txtBlood.Text == "Enter Blood Group")
+            {
+                txtBlood.Text = "";
+                txtBlood.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBlood_Leave(object sender, EventArgs e)
+        {
+            if (txtBlood.Text == "")
+            {
+                txtBlood.Text = "Enter Blood Group";
+                txtBlood.ForeColor = Color.Gray;
+            }
+        }
+
+        private void textpid_Enter(object sender, EventArgs e)
+        {
+            if (textpid.Text == "Search Patient ID")
+            {
+                textpid.Text = "";
+                textpid.ForeColor = Color.Black;
+            }
+        }
+
+        private void textpid_Leave(object sender, EventArgs e)
+        {
+            if (textpid.Text == "Search Patient ID")
+            {
+                textpid.Text = "Search Patient I";
+                textpid.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtSymptoms_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void txtSymptoms_Enter(object sender, EventArgs e)
+        {
+            if (txtSymptoms.Text == "Enter Symptoms")
+            {
+                txtSymptoms.Text = "";
+                txtSymptoms.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtSymptoms_Leave(object sender, EventArgs e)
+        {
+            if (txtSymptoms.Text == "Enter Symptoms")
+            {
+                txtSymptoms.Text = "Search Patient ID";
+                txtSymptoms.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtDignosis_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void txtDignosis_Enter(object sender, EventArgs e)
+        {
+            if (txtDignosis.Text == "Enter Diagnosis")
+            {
+                txtDignosis.Text = "";
+                txtDignosis.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtDignosis_Leave(object sender, EventArgs e)
+        {
+            if (txtDignosis.Text == "")
+            {
+                txtDignosis.Text = "Enter Diagnosis";
+                txtDignosis.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtMedicines_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMedicines_Enter(object sender, EventArgs e)
+        {           
+            if (txtMedicines.Text == "Enter Medicine")
+            {
+                txtMedicines.Text = "";
+                txtMedicines.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtMedicines_Leave(object sender, EventArgs e)
+        {
+            if (txtMedicines.Text == "")
+            {
+                txtMedicines.Text = "Enter Medicine";
+                txtMedicines.ForeColor = Color.Gray;
+            }
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            txtAddress.Clear();
+            txtContactNumber.Clear();
+            txtAge.Clear();
+            txtBlood.Clear();
+            txtAny.Clear();
+            txtPid.Clear();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
