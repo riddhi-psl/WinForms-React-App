@@ -38,7 +38,6 @@ namespace HMSA
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtAny = new System.Windows.Forms.TextBox();
-            this.txtPid = new System.Windows.Forms.TextBox();
             this.txtBlood = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
@@ -46,7 +45,6 @@ namespace HMSA
             this.txtName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -147,7 +145,6 @@ namespace HMSA
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.txtAny);
-            this.panel1.Controls.Add(this.txtPid);
             this.panel1.Controls.Add(this.txtBlood);
             this.panel1.Controls.Add(this.txtAge);
             this.panel1.Controls.Add(this.txtContactNumber);
@@ -155,7 +152,6 @@ namespace HMSA
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -226,7 +222,7 @@ namespace HMSA
             // txtAny
             // 
             this.txtAny.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAny.Location = new System.Drawing.Point(715, 170);
+            this.txtAny.Location = new System.Drawing.Point(727, 96);
             this.txtAny.Multiline = true;
             this.txtAny.Name = "txtAny";
             this.txtAny.Size = new System.Drawing.Size(245, 35);
@@ -236,24 +232,11 @@ namespace HMSA
             this.txtAny.Enter += new System.EventHandler(this.txtAny_Enter);
             this.txtAny.Leave += new System.EventHandler(this.txtAny_Leave);
             // 
-            // txtPid
-            // 
-            this.txtPid.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPid.Location = new System.Drawing.Point(715, 96);
-            this.txtPid.Multiline = true;
-            this.txtPid.Name = "txtPid";
-            this.txtPid.Size = new System.Drawing.Size(245, 35);
-            this.txtPid.TabIndex = 48;
-            this.txtPid.Text = "Enter Patient ID";
-            this.txtPid.TextChanged += new System.EventHandler(this.txtPid_TextChanged);
-            this.txtPid.Enter += new System.EventHandler(this.txtPid_Enter);
-            this.txtPid.Leave += new System.EventHandler(this.txtPid_Leave);
-            // 
             // txtBlood
             // 
             this.txtBlood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBlood.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtBlood.Location = new System.Drawing.Point(715, 330);
+            this.txtBlood.Location = new System.Drawing.Point(727, 256);
             this.txtBlood.Multiline = true;
             this.txtBlood.Name = "txtBlood";
             this.txtBlood.Size = new System.Drawing.Size(245, 35);
@@ -266,7 +249,7 @@ namespace HMSA
             // txtAge
             // 
             this.txtAge.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAge.Location = new System.Drawing.Point(715, 249);
+            this.txtAge.Location = new System.Drawing.Point(727, 175);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(245, 35);
@@ -332,27 +315,18 @@ namespace HMSA
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(509, 173);
+            this.label9.Location = new System.Drawing.Point(521, 99);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(177, 25);
             this.label9.TabIndex = 41;
             this.label9.Text = "Any Major Disease";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(590, 99);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 25);
-            this.label8.TabIndex = 40;
-            this.label8.Text = "Patient ID";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(561, 330);
+            this.label7.Location = new System.Drawing.Point(573, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 25);
             this.label7.TabIndex = 39;
@@ -363,7 +337,7 @@ namespace HMSA
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(628, 252);
+            this.label6.Location = new System.Drawing.Point(640, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 25);
             this.label6.TabIndex = 38;
@@ -432,7 +406,7 @@ namespace HMSA
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textpid);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Location = new System.Drawing.Point(59, 187);
+            this.panel2.Location = new System.Drawing.Point(59, 184);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1080, 535);
             this.panel2.TabIndex = 53;
@@ -559,7 +533,7 @@ namespace HMSA
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(373, 99);
+            this.label16.Location = new System.Drawing.Point(377, 90);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(116, 29);
             this.label16.TabIndex = 58;
@@ -608,10 +582,10 @@ namespace HMSA
             | System.Windows.Forms.AnchorStyles.Left)));
             this.textpid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textpid.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textpid.Location = new System.Drawing.Point(504, 93);
+            this.textpid.Location = new System.Drawing.Point(508, 84);
             this.textpid.Multiline = true;
             this.textpid.Name = "textpid";
-            this.textpid.Size = new System.Drawing.Size(205, 42);
+            this.textpid.Size = new System.Drawing.Size(205, 47);
             this.textpid.TabIndex = 54;
             this.textpid.Text = "Search Patient ID";
             this.textpid.TextChanged += new System.EventHandler(this.textpid_TextChanged);
@@ -635,7 +609,7 @@ namespace HMSA
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.panel3.Controls.Add(this.dataGridView2);
             this.panel3.Controls.Add(this.label17);
-            this.panel3.Location = new System.Drawing.Point(59, 184);
+            this.panel3.Location = new System.Drawing.Point(59, 187);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1080, 535);
             this.panel3.TabIndex = 69;
@@ -842,7 +816,6 @@ namespace HMSA
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox txtAny;
-        private System.Windows.Forms.TextBox txtPid;
         private System.Windows.Forms.TextBox txtBlood;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtContactNumber;
@@ -850,7 +823,6 @@ namespace HMSA
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

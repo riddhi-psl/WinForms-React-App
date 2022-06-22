@@ -103,7 +103,7 @@ namespace HMSA
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (txtName.Text == "" || txtAddress.Text == "" || txtContactNumber.Text == "" || txtAge.Text == "" || txtBlood.Text == "" || txtAny.Text == "" || txtPid.Text == "")
+            if (txtName.Text == "" || txtAddress.Text == "" || txtContactNumber.Text == "" || txtAge.Text == "" || txtBlood.Text == "" || txtAny.Text == "" )
             {
                 MessageBox.Show("Plese fill in the blanks");
             }
@@ -116,7 +116,7 @@ namespace HMSA
                     if (radioButton1.Checked) { Gender = "Male"; }
                     else { Gender = "Female"; }
                     con.Open();
-                    cmd = new SqlCommand("insert into AddPatient(Name,City,Contact,Age,Gender ,Blood_Group,Major_Disease,pid) values('" + txtName.Text + "', '" + txtAddress.Text + "', '" + txtContactNumber.Text + "', '" + txtAge.Text + "', '" + Gender + "', '" + txtBlood.Text + "', '" + txtAny.Text + "', '" + txtPid.Text + "')", con);
+                    cmd = new SqlCommand("insert into AddPatient(Name,City,Contact,Age,Gender ,Blood_Group,Major_Disease) values('" + txtName.Text + "', '" + txtAddress.Text + "', '" + txtContactNumber.Text + "', '" + txtAge.Text + "', '" + Gender + "', '" + txtBlood.Text + "', '" + txtAny.Text + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("data has been saved in database");
@@ -133,7 +133,6 @@ namespace HMSA
                 txtAge.Clear();
                 txtBlood.Clear();
                 txtAny.Clear();
-                txtPid.Clear();
             }
         }
 
@@ -248,8 +247,6 @@ namespace HMSA
 
                 try
                 {
-
-
 
                     int pid = int.Parse(textpid.Text);
 
@@ -587,25 +584,6 @@ namespace HMSA
             
         }
 
-        private void txtPid_Enter(object sender, EventArgs e)
-        {
-            if (txtPid.Text == "Enter Patient ID")
-            {
-                txtPid.Text = "";
-                txtPid.ForeColor = Color.Black;
-            }
-        }
-
-
-        private void txtPid_Leave(object sender, EventArgs e)
-        {
-            if (txtAge.Text == "")
-            {
-                txtAge.Text = "Enter Patient ID";
-                txtAge.ForeColor = Color.Gray;
-            }
-        }
-
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
@@ -750,7 +728,6 @@ namespace HMSA
             txtAge.Clear();
             txtBlood.Clear();
             txtAny.Clear();
-            txtPid.Clear();
         }
 
         private void label1_Click(object sender, EventArgs e)

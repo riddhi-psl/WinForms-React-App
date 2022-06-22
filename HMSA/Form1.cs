@@ -67,15 +67,22 @@ namespace HMSA
                 MyConnection db = new MyConnection();
                 using (db.con)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into tb_login(id,name,username,password,type) " +
-                            "values('" + id.Text + "','" + name.Text + "','" + txtUser.Text + "', '" + txtPass.Text + "', '" + txtCpass.Text + "')", db.con);
+                    SqlCommand cmd = new SqlCommand("insert into tb_login(name,username,password,type) " +
+                            "values('" + name.Text + "','" + txtUser.Text + "', '" + txtPass.Text + "', '" + txtCpass.Text + "')", db.con);
                     db.con.Open();
                     SqlDataReader rd = cmd.ExecuteReader();
                     //string name;
                     MessageBox.Show("User has been Registerd");
                     db.con.Close();
-                    panelLogin.Visible = true;
 
+                    if (txtCpass.Text == "Admin")
+                    {
+                        panelLogin.Visible = true;
+                    }
+                    else
+                    {
+                        panel2.Visible = true;
+                    }  
 
                 }
             }
@@ -214,6 +221,7 @@ namespace HMSA
         {
             try
             {
+                MyConnection db = new MyConnection();
                 using (db.con)
                 {
                     SqlCommand cmd = new SqlCommand("sp_role_login", db.con);
@@ -242,6 +250,7 @@ namespace HMSA
 
                         }
 
+                        db.con.Close();
                     }
                     else
                     {

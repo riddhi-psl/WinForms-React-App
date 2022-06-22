@@ -39,10 +39,8 @@ namespace HMSA
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnRegistration = new System.Windows.Forms.Button();
             this.txtCpass = new System.Windows.Forms.TextBox();
@@ -73,10 +71,8 @@ namespace HMSA
             // 
             this.panelRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panelRegister.Controls.Add(this.panel2);
-            this.panelRegister.Controls.Add(this.id);
             this.panelRegister.Controls.Add(this.name);
             this.panelRegister.Controls.Add(this.label14);
-            this.panelRegister.Controls.Add(this.label13);
             this.panelRegister.Controls.Add(this.button1);
             this.panelRegister.Controls.Add(this.BtnRegistration);
             this.panelRegister.Controls.Add(this.txtCpass);
@@ -199,19 +195,10 @@ namespace HMSA
             this.label12.TabIndex = 0;
             this.label12.Text = "User Login Form";
             // 
-            // id
-            // 
-            this.id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.Location = new System.Drawing.Point(338, 90);
-            this.id.Multiline = true;
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(200, 50);
-            this.id.TabIndex = 12;
-            // 
             // name
             // 
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(338, 146);
+            this.name.Location = new System.Drawing.Point(339, 120);
             this.name.Multiline = true;
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(200, 50);
@@ -222,21 +209,11 @@ namespace HMSA
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(180, 157);
+            this.label14.Location = new System.Drawing.Point(181, 131);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(124, 29);
             this.label14.TabIndex = 10;
             this.label14.Text = "Full Name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(268, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 29);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "ID";
             // 
             // button1
             // 
@@ -244,7 +221,7 @@ namespace HMSA
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkGray;
-            this.button1.Location = new System.Drawing.Point(364, 389);
+            this.button1.Location = new System.Drawing.Point(365, 363);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 60);
             this.button1.TabIndex = 8;
@@ -259,7 +236,7 @@ namespace HMSA
             this.BtnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistration.ForeColor = System.Drawing.Color.White;
-            this.BtnRegistration.Location = new System.Drawing.Point(213, 389);
+            this.BtnRegistration.Location = new System.Drawing.Point(214, 363);
             this.BtnRegistration.Name = "BtnRegistration";
             this.BtnRegistration.Size = new System.Drawing.Size(130, 60);
             this.BtnRegistration.TabIndex = 7;
@@ -270,7 +247,7 @@ namespace HMSA
             // txtCpass
             // 
             this.txtCpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpass.Location = new System.Drawing.Point(338, 314);
+            this.txtCpass.Location = new System.Drawing.Point(339, 288);
             this.txtCpass.Multiline = true;
             this.txtCpass.Name = "txtCpass";
             this.txtCpass.Size = new System.Drawing.Size(200, 50);
@@ -281,7 +258,7 @@ namespace HMSA
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(145, 327);
+            this.label4.Location = new System.Drawing.Point(146, 301);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(159, 29);
             this.label4.TabIndex = 5;
@@ -291,7 +268,7 @@ namespace HMSA
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(338, 258);
+            this.txtPass.Location = new System.Drawing.Point(339, 232);
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -302,7 +279,7 @@ namespace HMSA
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(338, 202);
+            this.txtUser.Location = new System.Drawing.Point(339, 176);
             this.txtUser.Multiline = true;
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(200, 50);
@@ -312,7 +289,7 @@ namespace HMSA
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(184, 270);
+            this.label3.Location = new System.Drawing.Point(185, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 29);
             this.label3.TabIndex = 2;
@@ -323,7 +300,7 @@ namespace HMSA
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(169, 216);
+            this.label2.Location = new System.Drawing.Point(170, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 29);
             this.label2.TabIndex = 1;
@@ -332,10 +309,10 @@ namespace HMSA
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(173, 22);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 29);
+            this.label1.Size = new System.Drawing.Size(230, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Register Page";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
@@ -351,9 +328,9 @@ namespace HMSA
             this.panelLogin.Controls.Add(this.label7);
             this.panelLogin.Controls.Add(this.label6);
             this.panelLogin.Controls.Add(this.AL);
-            this.panelLogin.Location = new System.Drawing.Point(244, 163);
+            this.panelLogin.Location = new System.Drawing.Point(244, 166);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(667, 463);
+            this.panelLogin.Size = new System.Drawing.Size(667, 460);
             this.panelLogin.TabIndex = 8;
             this.panelLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogin_Paint);
             // 
@@ -551,10 +528,8 @@ namespace HMSA
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
     }
 }
 
