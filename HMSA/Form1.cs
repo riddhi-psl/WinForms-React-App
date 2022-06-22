@@ -119,7 +119,7 @@ namespace HMSA
                         }
 
 
-                        db.con.Open();
+                        db.con.Close();
                     }
 
                     else
