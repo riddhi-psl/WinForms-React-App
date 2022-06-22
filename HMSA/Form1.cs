@@ -13,18 +13,10 @@ namespace HMSA
 {
     public partial class Form1 : Form
     {
-        MyConnection db = new MyConnection();
-        //SqlConnection Con;
-
-        //public SqlConnection Con { get; private set; }
-
-        //String path = "Data Source=(localdb)\\MSSqlLocalDB; Initial Catalog=hospital; Integrated Security=True";
-        //SqlConnection con;
-        //SqlCommand cmd;
+        MyConnection db;
         public Form1()
         {
             InitializeComponent();
-            //Con = new SqlConnection();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,68 +33,7 @@ namespace HMSA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //   if (txtuser.Text == txtUserName.Text && txtCpass.Text == txtPassword.Text)
-            //   {
-            //       SqlCommand cmd = new SqlCommand();
-            //       cmd.Connection = con;
-            //       cmd.CommandText = "select * from Register where username = '" + txtuser.Text + "'and password = '" + txtpass.Text + "'" ;
-            //       //cmd.ExecuteNonQuery();
-            //       SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //       DataSet ds = new DataSet();
-            //       da.Fill(ds);
-            //       SqlDataReader dbr;
 
-            //       con.Open();
-
-            //       dbr = cmd.ExecuteReader();
-
-            //       int count = 0;
-
-            //       while (dbr.Read())
-
-            //       {
-
-            //           count = count + 1;
-
-            //       }
-
-            //       if (count == 1)
-
-            //       {
-
-            //           MessageBox.Show("username and password is correct");
-
-            //       }
-
-            //       else if (count > 1)
-
-            //       {
-
-            //           MessageBox.Show("Duplicate username and password", "login page");
-
-            //       }
-
-            //       else
-
-            //       {
-
-            //           MessageBox.Show(" username and password incorrect", "login page");
-
-            //       }
-
-            //   }
-
-            //   else
-
-            //   {
-
-            //       MessageBox.Show(" dashboard opening", "login page");
-
-            //   }
-            //   this.Hide();
-            //           Dashboard db = new Dashboard();
-            //          db.Show();
-            //}
         }
 
 
@@ -117,96 +48,23 @@ namespace HMSA
         }
 
         private void button1_Click_1(object sender, EventArgs e) { }
-        //{
-        //    try
-        //    {
-        //        SqlCommand cmd = new SqlCommand();
-        //        cmd.Connection = con;
-        //        cmd.CommandText = "insert into Register(username,password,confirm_password) " +
-        //            "values('" + txtuser.Text + "', '" + txtpass.Text + "', '" + txtCpass.Text + "')";
-        //        //cmd.ExecuteNonQuery();
-        //        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //        DataSet ds = new DataSet();
-        //        da.Fill(ds);
-        //        MessageBox.Show("User has been Registerd");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //if (txtuser.Text == txtUserName.Text && txtCpass.Text == txtPassword.Text)
-            //{
-            //    SqlCommand cmd = new SqlCommand();
-            //    cmd.Connection = con;
-            //    cmd.CommandText = "select * from Register where username = '" + txtuser.Text + "'and password = '" + txtpass.Text + "'";
-            //    //cmd.ExecuteNonQuery();
-            //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //    DataSet ds = new DataSet();
-            //    da.Fill(ds);
-            //    SqlDataReader dbr;
-
-            //    con.Open();
-
-            //    dbr = cmd.ExecuteReader();
-
-            //    int count = 0;
-
-            //    while (dbr.Read())
-
-            //    {
-
-            //        count = count + 1;
-
-            //    }
-
-            //    if (count == 1)
-
-            //    {
-
-            //
-            //    }
-
-            //    else if (count > 1)
-
-            //    {
-
-            //
-            //    }
-
-            //    else
-
-            //    {
-
-            //
-            //    }
-
-            //}
-
-            //else
-
-            //{
-
-
-            //}
-            //this.Hide();
-            //Dashboard db = new Dashboard();
-            //db.Show();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //panelLogin.Visible = false;
             panelRegister.Visible = true;
         }
 
         private void BtnRegistration_Click(object sender, EventArgs e)
         {
+
             try
             {
+                MyConnection db = new MyConnection();
                 using (db.con)
                 {
                     SqlCommand cmd = new SqlCommand("insert into tb_login(id,name,username,password,type) " +
@@ -215,47 +73,25 @@ namespace HMSA
                     SqlDataReader rd = cmd.ExecuteReader();
                     //string name;
                     MessageBox.Show("User has been Registerd");
-
+                    db.con.Close();
                     panelLogin.Visible = true;
-                    //panelRegister.Visible = false;
 
-                    //try
-                    //{
-                    //    SqlCommand cmd = new SqlCommand();
-                    //    cmd.Connection = con;
-                    //    cmd.CommandText = "insert into Register(username,password,confirm_password) " +
-                    //        "values('" + txtUser.Text + "', '" + txtPass.Text + "', '" + txtCpass.Text + "')";
-                    //    //cmd.ExecuteNonQuery();
-                    //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    //    DataSet ds = new DataSet();
-                    //    da.Fill(ds);
-                    //    //string name;
-                    //    MessageBox.Show("User has been Registerd");
-
-                    //        panelLogin.Visible = true;
-                    //    //panelRegister.Visible = false;
-
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    MessageBox.Show(ex.Message);
-                    //}
 
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
-
             }
         }
 
-            private void btnLogin_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            try 
+            try
             {
-                using (db.con) {
+                MyConnection db = new MyConnection();
+                using (db.con)
+                {
                     SqlCommand cmd = new SqlCommand("sp_role_login", db.con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     db.con.Open();
@@ -272,89 +108,32 @@ namespace HMSA
                             MessageBox.Show("Invalid user");
                         }
 
-                        else 
+                        else
                         {
-                            
+
                             MyConnection.type = "A";
 
                             Dashboard d = new Dashboard();
                             d.Show();
                             this.Hide();
                         }
-                       
 
 
+                        db.con.Open();
                     }
-                    
-                    else 
+
+                    else
                     {
                         MessageBox.Show("Error Login");
                     }
-                    
+
                 }
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            //if (txtUser.Text == txtUserName.Text && txtCpass.Text == txtPassword.Text)
-            //{
-            //    SqlCommand cmd = new SqlCommand();
-            //    cmd.Connection = con;
-            //    cmd.CommandText = "select * from Register where username = '" + txtUser.Text + "'and password = '" + txtPass.Text + "'";
-            //    //cmd.ExecuteNonQuery();
-            //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //    DataSet ds = new DataSet();
-            //    da.Fill(ds);
-            //    SqlDataReader dbr;
-
-            //    con.Open();
-
-            //    dbr = cmd.ExecuteReader();
-
-            //    int count = 0;
-
-            //    while (dbr.Read())
-
-            //    {
-
-            //        count = count + 1;
-
-            //    }
-
-            //    if (count == 1)
-
-            //    {
-
-
-            //    }
-
-            //    else if (count > 1)
-
-            //    {
-
-
-            //    }
-
-            //    else
-
-            //    {
-
-
-            //    }
-
-            //}
-
-            //else
-
-            //{
-
-
-            //}
-            //this.Hide();
-            //Dashboard db = new Dashboard();
-            //db.Show();
 
         }
 
@@ -370,16 +149,10 @@ namespace HMSA
             panelRegister.Visible = true;
         }
 
-        //private void hyperLinkEdit1_OpenLink(object sender, DevExpress.XtraEditors.Controls.OpenLinkEventArgs e)
-        //{
-        //    panelLogin.Visible = false;
-        //    panelRegister.Visible = true;
-        //}
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             panelLogin.Visible = true;
-            //panelRegister.Visible = false;
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -398,9 +171,6 @@ namespace HMSA
             panel2.Visible = false;
             panelLogin.Visible = true;
             panelRegister.Visible = true;
-            //AL.Show();
-            //UL.Hide();
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -462,7 +232,7 @@ namespace HMSA
                             MessageBox.Show("Invalid User");
                         }
 
-                        else 
+                        else
                         {
 
                             MyConnection.type = "U";
@@ -472,8 +242,6 @@ namespace HMSA
 
                         }
 
-
-                       
                     }
                     else
                     {
@@ -546,5 +314,5 @@ namespace HMSA
 
         }
     }
-    }
+}
 

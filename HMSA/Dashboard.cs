@@ -55,14 +55,6 @@ namespace HMSA
         }
 
 
-        private void labelIndecator3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void labelIndecator4_Click(object sender, EventArgs e)
-        {
-        }
-
         private void Dashboard_Load(object sender, EventArgs e)
         {
             btnAddPatient.Show();
@@ -70,7 +62,7 @@ namespace HMSA
             btnAddMoreInfo.Show();
             btnHistory.Show();
             btnHospitalInfo.Show();
-            button2.Hide();
+            HospitalImage.Hide();
             pictureBox1.Visible = true;
             panel1.Visible = false;
             panel2.Visible = false;
@@ -82,7 +74,7 @@ namespace HMSA
                 btnAddMoreInfo.Visible = true;
                 btnHistory.Visible = true;
                 btnHospitalInfo.Visible = true;
-                button2.Visible=false;
+                HospitalImage.Visible=false;
 
             }
             else if (MyConnection.type == "U") {
@@ -90,44 +82,14 @@ namespace HMSA
                 btnAddPatient.Visible = true;
                 btnAddMoreInfo.Visible = false;
                 btnHistory.Visible = false;
-                button2.Visible = true;
+                HospitalImage.Visible = true;
                 btnHospitalInfo.Visible = true;
 
             }
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
 
@@ -154,7 +116,7 @@ namespace HMSA
                     if (radioButton1.Checked) { Gender = "Male"; }
                     else { Gender = "Female"; }
                     con.Open();
-                    cmd = new SqlCommand("insert into AddPatient(Name,Full_Address,Contact,Age,Gender ,Blood_Group,Major_Disease,pid) values('" + txtName.Text + "', '" + txtAddress.Text + "', '" + txtContactNumber.Text + "', '" + txtAge.Text + "', '" + Gender + "', '" + txtBlood.Text + "', '" + txtAny.Text + "', '" + txtPid.Text + "')", con);
+                    cmd = new SqlCommand("insert into AddPatient(Name,City,Contact,Age,Gender ,Blood_Group,Major_Disease,pid) values('" + txtName.Text + "', '" + txtAddress.Text + "', '" + txtContactNumber.Text + "', '" + txtAge.Text + "', '" + Gender + "', '" + txtBlood.Text + "', '" + txtAny.Text + "', '" + txtPid.Text + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("data has been saved in database");
@@ -186,6 +148,8 @@ namespace HMSA
             btnHistory.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
             btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
             btnHospitalInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            HospitalImage.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            HospitalImage.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
 
             panel1.Visible = true;
             panel2.Visible = false;
@@ -328,23 +292,14 @@ namespace HMSA
             panel4.Visible = false;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "select * from AddPatient" ;
-            //cmd.CommandText = "select * from AddPatient inner join PatientMore on AddPatient.pid=PatientMore.pid";
+            //cmd.CommandText = "select * from AddPatient" ;
+            //SELECT * FROM AddPatient FULL OUTER JOIN PatientMore ON AddPatient.pid = PatientMore.pid;
+            cmd.CommandText = "SELECT AddPatient.pid as PatientID, AddPatient.Name, AddPatient.Contact, AddPatient.City, AddPatient.Age, AddPatient.Gender, AddPatient.Blood_Group, AddPatient.Major_Disease, Symptoms, Diagonosis as Diagnosis, Medicines, Ward as Requirements, Ward_Type FROM AddPatient LEFT OUTER JOIN PatientMore ON AddPatient.pid = PatientMore.pid;";
             //cmd.ExecuteNonQuery();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView2.DataSource = ds.Tables[0];
-            //panel3.Visible = true;
-            //panel4.Visible = false;
-
-
-            //System.Net.IPAddress ipAddress = System.Net.IPAddress.Parse("127.0.0.1");
-            //    using (TcpClient client = new TcpClient())
-            //    {
-            //        client.Connect(ipAddress, 21);
-            //        lblStatus = "Connected...";
-            //    }
 
             }
 
@@ -364,6 +319,8 @@ namespace HMSA
             btnAddMoreInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
             btnHistory.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
             btnHistory.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            HospitalImage.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            HospitalImage.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
 
             panel4.Visible = true;
             panel1.Visible = false;
@@ -434,6 +391,15 @@ namespace HMSA
             panel4.Visible = false;
             //pictureBox1.Visible = true;
 
+
+            HospitalImage.BackColor = System.Drawing.Color.FromArgb(38, 154, 237);
+            HospitalImage.ForeColor = System.Drawing.Color.White;
+
+            btnAddPatient.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnAddPatient.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+            btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(237, 238, 239);
+            btnHospitalInfo.ForeColor = System.Drawing.Color.FromArgb(135, 135, 135);
+
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
@@ -453,30 +419,6 @@ namespace HMSA
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void Refreshbtn_Click(object sender, EventArgs e)
-        {
-            if (textpid.Text != "")
-            {
-                int pid = int.Parse(textpid.Text);
-                //if (pid || )
-                //{
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "select * from AddPatient where pid=" + pid + ""; 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-            }
-
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -577,7 +519,7 @@ namespace HMSA
 
         private void txtAddress_Enter(object sender, EventArgs e)
         {
-            if (txtAddress.Text == "Enter Full Address")
+            if (txtAddress.Text == "Enter City")
             {
                 txtAddress.Text = "";
                 txtAddress.ForeColor = Color.Black;
@@ -588,7 +530,7 @@ namespace HMSA
         {
             if (txtAddress.Text == "")
             {
-                txtAddress.Text = "Enter Full Address";
+                txtAddress.Text = "Enter City";
                 txtAddress.ForeColor = Color.Gray;
             }
         }
@@ -812,6 +754,11 @@ namespace HMSA
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click_1(object sender, EventArgs e)
         {
 
         }

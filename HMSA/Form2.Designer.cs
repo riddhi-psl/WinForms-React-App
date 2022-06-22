@@ -37,9 +37,9 @@ namespace HMSA
             // 
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(12, 12);
+            this.webView21.Location = new System.Drawing.Point(5, 0);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(1149, 710);
+            this.webView21.Size = new System.Drawing.Size(1111, 539);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
             this.webView21.WebMessageReceived += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs>(this.webView21_WebMessageReceived);
@@ -49,7 +49,7 @@ namespace HMSA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 741);
+            this.ClientSize = new System.Drawing.Size(1123, 543);
             this.Controls.Add(this.webView21);
             this.Name = "Form2";
             this.Text = "Form2";
